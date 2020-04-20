@@ -1,6 +1,7 @@
-import random
+import random   # for generating random values for the game
 
-def difficulty():
+
+def difficulty():  # function for creating the different conditions for the different levels
     print("Great let\'s get started")
     while True:
         level = input("Please start the game by typing Easy, Medium or Hard depending on your preferred level:")
@@ -25,12 +26,12 @@ def difficulty():
             result = [random_choice, guess_count]
             return result
         else:
-            print("Invalid input- Please type Easy, Medium or Hard")
+            print("Invalid input- Please type Easy, Medium or Hard")  # for managing wrong input while choosing a level
             True
-win = []
-loss = []
+win = []  # list for wins while looping
+loss = []  # list for losses while looping
 status = True
-while status:
+while status:  # main loop for the game
     result = difficulty()
     random_choice = result[0]
     guess_count = result[1]
@@ -64,7 +65,7 @@ while status:
         if 'y' in another_game.lower():
             status = True
         else:
-            print("Thanks for playing!You won {} time(s) and lost {} time(s)".format(sum(win), sum(loss)))
+            print("Thanks for playing!You won {} time(s) and lost {} time(s)".format(sum(win), sum(loss))) #final result
             exit()
 
 
